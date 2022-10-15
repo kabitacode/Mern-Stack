@@ -18,7 +18,7 @@ routes.route("/update/:id").put((req, res) => {
     .catch((error) => res.status(400).json(error.message))
 })
 
-routes.route("/add").post(async (req, res) => {
+routes.route("/").post(async (req, res) => {
     const data = new BukuModel({
         judul: req.body.judul,
         pengarang: req.body.pengarang,
